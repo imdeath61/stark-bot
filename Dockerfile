@@ -1,4 +1,5 @@
-﻿FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
+﻿# Versión definitiva para .NET 10.0 - Actualizado
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /app
 
 # Copiar archivos y restaurar
