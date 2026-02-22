@@ -1,5 +1,4 @@
-﻿# Versión definitiva para .NET 10.0 - Actualizado
-FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
+﻿FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /app
 
 # Copiar archivos y restaurar
@@ -10,7 +9,8 @@ RUN dotnet restore AcV2/AcV2.csproj
 COPY . .
 RUN dotnet publish AcV2/AcV2.csproj -c Release -o out
 
-FROM mcr.microsoft.com/dotnet/aspnet:10.0
+# Usar imagen con soporte para Windows Desktop
+FROM mcr.microsoft.com/dotnet/desktop:10.0
 WORKDIR /app
 COPY --from=build /app/out .
 ENTRYPOINT ["dotnet", "AcV2.dll"]
