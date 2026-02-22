@@ -1,0 +1,36 @@
+# Archivos compilados y ejecutables
+*.exe
+*.dll
+*.pdb
+*.config
+*.manifest
+
+# Carpetas de compilación
+bin/
+obj/
+Debug/
+Release/
+x64/
+x86/
+
+# Archivos específicos grandes
+AcV2/CUserSairtonDesktopMicLicker.exe/
+CUserSairtonDesktopMicLicker.exe/
+
+# Archivos de Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Archivos temporales
+*.tmp
+*.log
+*.cache
+*.suo
+*.userprefs
+
+# Archivos de base de datos
+*.mdf
+*.ldf
